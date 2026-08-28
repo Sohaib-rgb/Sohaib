@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="DevForge — a modern platform for software project requests, collaboration and developer services.">
-<title>DevForge — Build. Collaborate. Ship.</title>
+<meta name="description" content="SohaibStudio — a modern platform for software project requests, collaboration and developer services.">
+<title>SohaibStudio — Design. Build. Ship.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -13,9 +13,9 @@
 <body>
 <div class="bg-orb orb1"></div><div class="bg-orb orb2"></div>
 <header class="nav">
-  <a class="brand" href="#"><span class="brand-mark">⌁</span> DevForge</a>
+  <a class="brand" href="#"><span class="brand-mark">⌁</span> SohaibStudio</a>
   <nav class="links">
-    <a href="#discover">Discover</a><a href="#how">How it works</a><a href="#projects">Projects</a>
+    <a href="#discover">Discover</a><a href="#features">Features</a><a href="#how">How it works</a><a href="#projects">Projects</a>
   </nav>
   <div class="nav-actions"><button class="ghost" onclick="showToast('Sign-in flow is ready for your backend.')">Sign in</button><button class="primary small" onclick="scrollToId('projects')">Explore projects →</button></div>
   <button class="menu" onclick="toggleMenu()">☰</button>
@@ -42,6 +42,18 @@
  <div id="projectGrid" class="grid"></div>
 </section>
 
+<section id="features" class="how section">
+ <div class="section-head"><div><span class="kicker">PROFESSIONAL TOOLKIT</span><h2>Everything a serious software platform needs.</h2></div></div>
+ <div class="steps">
+  <article><span>01</span><h3>Project requests</h3><p>Collect scope, budget, timeline, technology and contact details.</p></article>
+  <article><span>02</span><h3>Developer profiles</h3><p>Show skills, tech stack, portfolio links and completed work.</p></article>
+  <article><span>03</span><h3>Search & matching</h3><p>Filter projects by Web, Mobile, AI, UI/UX and required skills.</p></article>
+  <article><span>04</span><h3>Admin dashboard</h3><p>Review incoming requests and move them from New to In Progress to Completed.</p></article>
+  <article><span>05</span><h3>Notifications</h3><p>Connect email or push notifications when a real backend is enabled.</p></article>
+  <article><span>06</span><h3>Security & trust</h3><p>Add authentication, rate limiting, privacy policy, terms and spam protection.</p></article>
+ </div>
+</section>
+
 <section id="how" class="how section">
  <div class="section-head"><div><span class="kicker">SIMPLE BY DESIGN</span><h2>From idea to impact.</h2></div></div>
  <div class="steps">
@@ -57,7 +69,7 @@
 </section>
 </main>
 
-<footer><div class="brand"><span class="brand-mark">⌁</span> DevForge</div><span>© 2026 DevForge. Built for the next generation of software builders.</span><div><a href="#">Privacy</a><a href="#">Terms</a></div></footer>
+<footer><div class="brand"><span class="brand-mark">⌁</span> SohaibStudio</div><span>© 2026 SohaibStudio. Built for the next generation of software builders.</span><div><a href="#">Privacy</a><a href="#">Terms</a></div></footer>
 
 <div id="modal" class="modal" aria-hidden="true"><div class="modal-card"><button class="close" onclick="closeModal()">×</button><span class="kicker">NEW PROJECT</span><h2>Tell builders what you're creating.</h2><form onsubmit="submitProject(event)"><label>Project name<input required placeholder="e.g. Campus marketplace"></label><label>Category<select id="category"><option>Web</option><option>Mobile</option><option>AI & Data</option><option>UI/UX</option></select></label><label>Brief<textarea required placeholder="What are you trying to build?"></textarea></label><button class="primary full">Post project →</button></form></div></div>
 <div id="toast" class="toast"></div>
