@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="DevForge — a modern platform for software project requests, collaboration and developer services.">
+<title>DevForge — Build. Collaborate. Ship.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="bg-orb orb1"></div><div class="bg-orb orb2"></div>
+<header class="nav">
+  <a class="brand" href="#"><span class="brand-mark">⌁</span> DevForge</a>
+  <nav class="links">
+    <a href="#discover">Discover</a><a href="#how">How it works</a><a href="#projects">Projects</a>
+  </nav>
+  <div class="nav-actions"><button class="ghost" onclick="showToast('Sign-in flow is ready for your backend.')">Sign in</button><button class="primary small" onclick="scrollToId('projects')">Explore projects →</button></div>
+  <button class="menu" onclick="toggleMenu()">☰</button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="eyebrow"><span></span> THE NEW WAY TO BUILD SOFTWARE</div>
+  <h1>Turn ideas into<br><em>shipped software.</em></h1>
+  <p class="hero-copy">A focused space where ambitious builders post software projects, find the right skills, and move from concept to launch.</p>
+  <div class="hero-buttons"><button class="primary" onclick="scrollToId('projects')">Find a project <span>↗</span></button><button class="secondary" onclick="openModal()">Post a project <span>＋</span></button></div>
+  <div class="trust"><div class="avatars"><b>AK</b><b>SM</b><b>ZN</b><b>+</b></div><span>Built for students, developers &amp; founders</span></div>
+</section>
+
+<section class="stats">
+ <div><strong>2.4k+</strong><span>Projects posted</span></div><div><strong>1.8k</strong><span>Builders</span></div><div><strong>94%</strong><span>Completion rate</span></div><div><strong>24/7</strong><span>Global collaboration</span></div>
+</section>
+
+<section id="discover" class="section">
+ <div class="section-head"><div><span class="kicker">EXPLORE</span><h2>Find work worth building.</h2></div><button class="text-btn" onclick="showToast('All projects are shown in this prototype.')">View all projects →</button></div>
+ <div class="filters">
+   <button class="filter active" data-filter="all">All</button><button class="filter" data-filter="web">Web</button><button class="filter" data-filter="mobile">Mobile</button><button class="filter" data-filter="ai">AI &amp; Data</button><button class="filter" data-filter="design">UI/UX</button>
+ </div>
+ <div id="projectGrid" class="grid"></div>
+</section>
+
+<section id="how" class="how section">
+ <div class="section-head"><div><span class="kicker">SIMPLE BY DESIGN</span><h2>From idea to impact.</h2></div></div>
+ <div class="steps">
+  <article><span>01</span><h3>Post</h3><p>Describe what you want to build, your stack, scope and timeline.</p></article>
+  <article><span>02</span><h3>Connect</h3><p>Discover builders with the skills and experience your project needs.</p></article>
+  <article><span>03</span><h3>Ship</h3><p>Collaborate, track progress and turn a clear brief into working software.</p></article>
+ </div>
+</section>
+
+<section id="projects" class="cta section">
+ <div><span class="kicker">START BUILDING</span><h2>Your next project<br>starts with one brief.</h2><p>No clutter. No noise. Just a better way to build.</p></div>
+ <button class="primary" onclick="openModal()">Create a project <span>↗</span></button>
+</section>
+</main>
+
+<footer><div class="brand"><span class="brand-mark">⌁</span> DevForge</div><span>© 2026 DevForge. Built for the next generation of software builders.</span><div><a href="#">Privacy</a><a href="#">Terms</a></div></footer>
+
+<div id="modal" class="modal" aria-hidden="true"><div class="modal-card"><button class="close" onclick="closeModal()">×</button><span class="kicker">NEW PROJECT</span><h2>Tell builders what you're creating.</h2><form onsubmit="submitProject(event)"><label>Project name<input required placeholder="e.g. Campus marketplace"></label><label>Category<select id="category"><option>Web</option><option>Mobile</option><option>AI & Data</option><option>UI/UX</option></select></label><label>Brief<textarea required placeholder="What are you trying to build?"></textarea></label><button class="primary full">Post project →</button></form></div></div>
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body></html>
